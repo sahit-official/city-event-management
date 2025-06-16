@@ -8,6 +8,7 @@ class CityEventManagementApplicationTests {
 
 	@Test
 	void contextLoads() {
+		assertEquals(1+1,2);
 	}
 
 }
