@@ -16,9 +16,9 @@ services:
     networks:
       - springboot-network
 
-  springbootweb:
+  city-mangement:
     build: .
-    container_name: springbootweb
+    container_name: city-mangement
     environment:
       MYSQL_HOST: mysql
       MYSQL_PORT: 3306
