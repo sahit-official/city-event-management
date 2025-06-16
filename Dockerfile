@@ -1,12 +1,8 @@
-# Use the official OpenJDK image as the base
-FROM openjdk:17-jdk-slim
-
-# Set the working directory inside the container
+FROM maven:3.8.6-openjdk-17 AS build
 WORKDIR /app
+COPY . .
+RUN mvn clean package
 
-# Copy the application JAR file to the container
-
-COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8090
 
