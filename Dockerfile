@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the application JAR file to the container
-COPY target/city-event-management.jar /app/city-event-management.jar
 
-# Expose the port your application runs on
+COPY --from=build /app/target/*.jar app.jar
+
 EXPOSE 8090
 
-# Define the entry point for running the application
-CMD ["java", "-jar", "city-event-management.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
+ 
