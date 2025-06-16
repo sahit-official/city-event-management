@@ -9,6 +9,10 @@ services:
       MYSQL_DATABASE: test
       MYSQL_USER: user
       MYSQL_PASSWORD: password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
     ports:
       - "3307:3306"
     volumes:
