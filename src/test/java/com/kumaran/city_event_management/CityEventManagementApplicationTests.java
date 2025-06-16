@@ -1,4 +1,4 @@
-/*package com.kumaran.city_event_management;
+package com.kumaran.city_event_management;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,4 +11,4 @@ class CityEventManagementApplicationTests {
 		assertEquals(1+1,2);
 	}
 
-}*/
+}
