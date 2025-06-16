@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add an event</title>
+</head>
+<body>
+  <form th:action="@{/processAddEventForm}" th:object="${event}" method="post">
+     <label>
+      Title:<br/>
+      <input type="text" th:field="${event.eventTitle}"/>
+    </label>
+    <br/>
+    <label>
+      Description:<br/>
+      <input type="text" th:field="${event.description}"/>
+    </label>
+    <br/>
+    <label>
+      Category:<br/>
+      <input type="text" th:field="${event.category}"/>
+    </label>
+    <br/>
+    <label>
+      Location:<br/>
+      <input type="text" th:field="${event.location}"/>
+    </label>
+    <br/>
+    <label>
+      Available seats:<br/>
+      <input type="number" th:field="${event.availableSeats}"/>
+    </label>
+    <br/>
+    <button type="submit">submit</button>
+  </form>
+</body>
+</html>

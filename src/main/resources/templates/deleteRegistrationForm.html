@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete a Registration</title>
+</head>
+<body>
+  <form th:action="@{/processDeleteRegistrationForm}" method="post">
+    <label>
+      Enter id:<br/>
+      <input type="number" name="id"/>
+    </label>
+    <br/>
+    <button type="submit">submit</button>
+  </form>
+</body>
+</html>

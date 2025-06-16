@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add User</title>
+</head>
+<body>
+  <form th:action="@{/processAddUserForm}" th:object="${user}" method="post">
+    <label>
+      Name:
+      <input type="text" th:field="${user.userName}"/>
+    </label>
+    <label>
+      Email:
+      <input type="email" th:field="${user.email}"/>
+    </label>
+    <label>
+      Password:
+      <input type="password" th:field="${user.password}"/>
+    </label>
+    <label>
+      Role:
+      <input type="text" th:field="${user.role}"/>
+    </label>
+    <button type="submit">submit</button>
+  </form>
+</body>
+</html>

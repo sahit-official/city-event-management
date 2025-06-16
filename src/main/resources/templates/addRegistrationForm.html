@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add a registration</title>
+</head>
+<body>
+  <form th:action="@{/processAddRegistrationForm}" method="post">
+    <label>
+      Enter ID of existing user:<br/>
+      <input name = "userId" type="number"/>
+    </label>
+    <br/>
+    <label>
+      Enter ID of existing event:<br/>
+      <input name = "eventId" type = "number"/>
+    </label>
+    <br/>
+    <button type="submit">submit</button>
+  </form>
+</body>
+</html>

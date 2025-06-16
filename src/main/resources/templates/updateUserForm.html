@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update User</title>
+</head>
+<body>
+  <form th:action="@{/processUpdateUserForm}" th:object="${newUser}" method="post">
+    <label>
+      Enter the ID of the user to be edited:
+      <input type="number" name = "id"/>
+    </label>
+    <br/>
+    <label>
+      Name:
+      <input type="text" th:field="${newUser.userName}"/>
+    </label>
+        <br/>
+    <label>
+      Email:
+      <input type="email" th:field="${newUser.email}"/>
+    </label>
+    <br/>
+    <label>
+      Password:
+      <input type="password" th:field="${newUser.password}"/>
+    </label>
+    <br/>
+    <label>
+      Role:
+      <input type="text" th:field="${newUser.role}"/>
+    </label>
+    <br/>
+    <button type="submit">submit</button>
+  </form>
+</body>
+</html>

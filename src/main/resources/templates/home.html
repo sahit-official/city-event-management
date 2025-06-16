@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+</head>
+<body>
+  <h1>Home Page</h1>
+  <a th:href="@{/addUserForm}">Add a user</a>
+  <a th:href="@{/updateUserForm}">Update a user</a>
+  <a th:href="@{/deleteUserForm}">Delete a user</a>
+  <a th:href="@{/addEventForm}">Add an event</a>
+  <a th:href="@{/addRegistrationForm}">Add a registration</a>
+  <a th:href="@{/deleteRegistrationForm}">remove a registration</a>
+  <a th:href="@{/user-by-role}">Get users by role</a>
+  <h3>List of Users: </h3>
+  <table border="1">
+  	<tr>
+  	  <th>ID</th>
+  	  <th>Name</th>
+  	  <th>Email</th>
+  	  <th>Role</th>
+  	</tr>
+  	<tr th:each="user : ${users}">
+  	  <td th:text="${user.userId}"></td>
+  	  <td th:text="${user.userName}"></td>
+  	  <td th:text="${user.email}"></td>
+  	  <td th:text="${user.role}"></td>
+  	</tr>
+  </table>
+  <h3>List of Events: </h3>
+  <table border = "1">
+    	<tr>
+  	  <th>ID</th>
+  	  <th>Seats</th>
+  	  <th>Title</th>
+  	  <th>Description</th>
+  	  <th>Category</th>
+  	  <th>Location</th>
+  	  <th>Date</th>
+  	</tr>
+  	<tr th:each="event : ${events}">
+  	  <td th:text="${event.eventId}"></td>
+  	  <td th:text="${event.availableSeats}"></td>
+  	  <td th:text="${event.eventTitle}"></td>
+  	  <td th:text="${event.description}"></td>
+  	  <td th:text="${event.category}"></td>
+  	  <td th:text="${event.location}"></td>
+  	  <td th:text="${event.date}"></td>
+  	</tr>
+  </table>
+  <h3>List of registrations</h3>
+    <table border="1">
+  	<tr>
+  	  <th>ID</th>
+  	  <th>User</th>
+  	  <th>Event</th>
+  	</tr>
+  	<tr th:each="reg : ${registrations}">
+  	  <td th:text="${reg.registrationId}"></td>
+  	  <td th:text="${reg.user.userName}"></td>
+  	  <td th:text="${reg.event.eventTitle}"></td>
+  	</tr>
+  </table>
+</body>
+</html>
